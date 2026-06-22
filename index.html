@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgendaYA - Prototipo TP5</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>AgendaYA - Prototipo TP5</h1>
+    <p>Funcionalidades mínimas para ejecutar los casos de prueba M03 y M04.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>M03 - Gestión de tipos de evento</h2>
+      <div class="grid">
+        <form id="event-form">
+          <input type="hidden" id="event-id" />
+          <label>Nombre *</label>
+          <input id="event-name" type="text" placeholder="Ej: Consulta Inicial" />
+
+          <label>Duración en minutos *</label>
+          <input id="event-duration" type="number" min="1" placeholder="30" />
+
+          <label>Modalidad *</label>
+          <select id="event-modality">
+            <option value="">Seleccionar</option>
+            <option>Presencial</option>
+            <option>Virtual</option>
+          </select>
+
+          <label>Tipo de confirmación *</label>
+          <select id="event-confirmation">
+            <option value="Automática">Automática</option>
+            <option value="Manual">Manual</option>
+          </select>
+
+          <label>Descripción opcional (máx. 500 caracteres)</label>
+          <textarea id="event-description" maxlength="600" placeholder="Descripción pública del evento"></textarea>
+
+          <div class="actions">
+            <button type="submit" id="save-event">Guardar evento</button>
+            <button type="button" id="reset-form">Limpiar</button>
+          </div>
+          <p id="event-message" class="message"></p>
+        </form>
+
+        <div>
+          <h3>Tipos de evento creados</h3>
+          <div id="events-list" class="cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>M04 - Booking público</h2>
+      <p><strong>Perfil público:</strong> Dra. Martina López</p>
+      <label>Seleccionar tipo de evento</label>
+      <select id="booking-event"></select>
+
+      <div class="booking-grid">
+        <div>
+          <h3>Calendario - Julio 2026</h3>
+          <div id="calendar" class="calendar"></div>
+          <p id="calendar-message" class="message"></p>
+        </div>
+        <div>
+          <h3>Horarios disponibles</h3>
+          <div id="slots" class="slots"></div>
+          <p id="slot-message" class="message"></p>
+        </div>
+      </div>
+
+      <form id="reservation-form" class="reservation">
+        <h3>Confirmar reserva</h3>
+        <p id="reservation-summary">Seleccione evento, día y horario.</p>
+        <label>Nombre completo *</label>
+        <input id="guest-name" type="text" />
+        <label>Correo electrónico *</label>
+        <input id="guest-email" type="email" />
+        <label>Teléfono (opcional)</label>
+        <input id="guest-phone" type="tel" />
+        <label>Notas (opcional)</label>
+        <textarea id="guest-notes" maxlength="300"></textarea>
+        <button type="submit">Confirmar reserva</button>
+        <p id="reservation-message" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

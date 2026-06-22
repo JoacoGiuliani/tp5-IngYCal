@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #1f2937; }
+header { background: #1e3a8a; color: white; padding: 24px; }
+main { max-width: 1100px; margin: auto; padding: 24px; }
+.panel { background: white; border-radius: 14px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.grid, .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+label { display: block; margin-top: 12px; font-weight: 700; }
+input, select, textarea, button { width: 100%; padding: 10px; margin-top: 6px; border: 1px solid #cbd5e1; border-radius: 8px; }
+textarea { min-height: 80px; }
+button { background: #2563eb; color: white; font-weight: 700; cursor: pointer; border: 0; }
+button.secondary, #reset-form { background: #64748b; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.message { min-height: 20px; font-weight: 700; }
+.message.error { color: #b91c1c; }
+.message.ok { color: #047857; }
+.card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; margin-bottom: 10px; background: #f8fafc; }
+.card h4 { margin: 0 0 6px; }
+.card .row { display: flex; gap: 8px; margin-top: 8px; }
+.card .row button { padding: 8px; }
+.delete { background: #dc2626; }
+.calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.day { padding: 12px 4px; border-radius: 8px; background: #e5e7eb; text-align: center; cursor: not-allowed; }
+.day.available { background: #ffffff; border: 1px solid #2563eb; color: #1e40af; cursor: pointer; }
+.day.selected { background: #111827; color: #ffffff; border-color: #111827; }
+.slot { padding: 10px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #2563eb; color: #1e40af; background: #eff6ff; cursor: pointer; }
+.slot.selected { background: #111827; color: #ffffff; border-color: #111827; }
+.reservation { margin-top: 20px; border-top: 1px solid #e5e7eb; padding-top: 10px; }
+.invalid { border: 2px solid #dc2626; }
+@media (max-width: 800px) { .grid, .booking-grid { grid-template-columns: 1fr; } }
