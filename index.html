@@ -13,10 +13,11 @@
   </header>
 
   <main>
-    <section class="panel">
+    <section class="panel"><h2>Acceso del administrador</h2><form id="login-form"><label>Usuario</label><input id="login-user" value="admin" autocomplete="username"><label>Contraseña</label><input id="login-password" type="password" autocomplete="current-password"><button>Iniciar sesión</button><p id="login-message" class="message"></p></form></section>
+    <section class="panel" id="admin-panel" hidden>
       <h2>M03 - Gestión de tipos de evento</h2>
       <div class="grid">
-        <form id="event-form">
+        <form id="event-form" novalidate>
           <input type="hidden" id="event-id" />
           <label>Nombre *</label>
           <input id="event-name" type="text" placeholder="Ej: Consulta Inicial" />
@@ -31,6 +32,7 @@
             <option>Virtual</option>
           </select>
 
+          <label>Enlace virtual o dirección presencial *</label><input id="event-location" type="text">
           <label>Tipo de confirmación *</label>
           <select id="event-confirmation">
             <option value="Automática">Automática</option>
@@ -48,7 +50,7 @@
         </form>
 
         <div>
-          <h3>Tipos de evento creados</h3>
+          <h3>Tipos de evento creados</h3><button type="button" id="reset-data">Restaurar datos de prueba</button>
           <div id="events-list" class="cards"></div>
         </div>
       </div>
@@ -62,7 +64,7 @@
 
       <div class="booking-grid">
         <div>
-          <h3>Calendario - Julio 2026</h3>
+          <h3 id="calendar-title">Calendario</h3><label>Mes y año</label><input type="month" id="month">
           <div id="calendar" class="calendar"></div>
           <p id="calendar-message" class="message"></p>
         </div>
@@ -73,7 +75,7 @@
         </div>
       </div>
 
-      <form id="reservation-form" class="reservation">
+      <form id="reservation-form" class="reservation" novalidate>
         <h3>Confirmar reserva</h3>
         <p id="reservation-summary">Seleccione evento, día y horario.</p>
         <label>Nombre completo *</label>
