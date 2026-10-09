@@ -29,4 +29,4 @@ La confirmación manual genera reservas pendientes; la automática genera reserv
 El estado persiste en data.sqlite3. No publicar esa base ni las cuentas del laboratorio en GitHub. Ver .gitignore.
 
 Repositorio base: https://github.com/JoacoGiuliani/tp5-IngYCal
-La versión corregida aún está local y debe publicarse en una rama del repositorio antes de la entrega definitiva.
+Versión corregida publicada: https://github.com/JoacoGiuliani/tp5-IngYCal/tree/codex/tp5-entrega
